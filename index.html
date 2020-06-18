@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Плеер</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css">
+  <style>
+    button {
+        border-style: none;
+        color: white;
+        background-color: transparent;
+        font-size: 150%;
+        padding: 15px;
+    }
+    .buttons_block {
+        background: black;
+        display: flex;
+        flex-direction: row;
+    }
+    .buttons_space {
+        flex-grow: 1;
+    }
+    .player_block {
+        width: 800px;
+        height: 600px;
+        box-shadow: 0 0 30px rgba(0,0,0,5);
+        display: flex;
+        flex-direction: column;
+    }
+    .video_block {
+        flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="player" class="player_block">
+      <div class="js-video-container video_block"></div>
+      <!-- Here can be placed player controls: play and volume buttons -->
+      <div class="buttons_block">
+        <button class="js-play-button">
+          <i class="fa fa-play" aria-hidden="true"></i>
+        </button>
+        <button class="js-pause-button">
+          <i class="fa fa-pause" aria-hidden="true"></i>
+        </button>
+        <button class="js-mute-button">
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </button>
+        <button class="js-volume-button">
+          <i class="fa fa-volume-off" aria-hidden="true"></i>
+        </button>
+        <div class="buttons_space"></div>
+        <button class="js-fullscreen-button">
+          <i class="fa fa-expand" aria-hidden="true"></i>
+        </button>
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
+  <script src="static/js/player.js"></script>
+
+  <script type="text/javascript">
+    createPlayer({elementId: 'player'});
+  </script>
+
+</body>
+</html>
