@@ -9,7 +9,7 @@
   <link rel="manifest" href="static/favicon/site.webmanifest">
   <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css">
   <style>
-    button {
+    .button {
         border-style: none;
         color: white;
         background-color: transparent;
@@ -23,6 +23,12 @@
     }
     .buttons_space {
         flex-grow: 1;
+    }
+    .buttons_volume_off {
+        width: 52.292px;
+    }
+    .buttons_play {
+        width: 50.573px
     }
     .player_block {
         width: 800px;
@@ -41,20 +47,20 @@
       <div class="js-video-container video_block"></div>
       <!-- Here can be placed player controls: play and volume buttons -->
       <div class="buttons_block">
-        <button class="js-play-button">
+        <button class="button js-play-button buttons_play">
           <i class="fa fa-play" aria-hidden="true"></i>
         </button>
-        <button class="js-pause-button">
+        <button class="button js-pause-button">
           <i class="fa fa-pause" aria-hidden="true"></i>
         </button>
-        <button class="js-mute-button">
+        <button class="button js-mute-button">
           <i class="fa fa-volume-up" aria-hidden="true"></i>
         </button>
-        <button class="js-volume-button">
+        <button class="button js-volume-button buttons_volume_off">
           <i class="fa fa-volume-off" aria-hidden="true"></i>
         </button>
         <div class="buttons_space"></div>
-        <button class="js-fullscreen-button">
+        <button class="button js-fullscreen-button">
           <i class="fa fa-expand" aria-hidden="true"></i>
         </button>
       </div>
